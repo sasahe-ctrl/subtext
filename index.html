@@ -298,7 +298,7 @@ async function sendMessage(){
     // 滑动窗口：只保留最近10条历史（5轮对话），防止token累积爆掉
     const recentHistory=history.slice(-10);
     const messages=[{role:"system",content:SYSTEM},...recentHistory,{role:"user",content:text}];
-    const res=await fetch("https://key.simpleai.com.cn/v1/chat/completions",{
+    const res=await fetch("https://leafapi.cc/v1/chat/completions",{
       method:"POST",
       headers:{"Content-Type":"application/json","Authorization":"Bearer "+API_KEY},
       body:JSON.stringify({model:"claude-opus-4-7",messages:messages})
