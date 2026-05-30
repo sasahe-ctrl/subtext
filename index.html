@@ -297,9 +297,9 @@ async function sendMessage(){
   try{
     const recentHistory=history.slice(-10);
     const messages=[{role:"system",content:SYSTEM},...recentHistory,{role:"user",content:text}];
-    const res=await fetch("https://leafapi.cc/v1/chat/completions",{
+     const res=await fetch("/.netlify/functions/chat",{
       method:"POST",
-      headers:{"Content-Type":"application/json","Authorization":"Bearer "+API_KEY},
+      headers:{"Content-Type":"application/json"},
       body:JSON.stringify({model:"claude-opus-4-7",messages:messages})
     });
     const data=await res.json();
