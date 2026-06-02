@@ -1,38 +1,60 @@
-给你换上了一套“既有情绪，又带点互联网毒舌与先锋杂志感”的 Markdown 排版。去掉了原本平铺直叙的说明书感，让它看起来更像一个有灵魂、想让人立刻打开的私人容器。
+# Stella · Private AI Epigram Companion
+[![Deployment - GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-2A2E35?style=flat-square&logo=github)](https://pages.github.com/)
+[![Kernel - Claude API](https://img.shields.io/badge/Kernel-Claude_Opus-E87B57?style=flat-square)](https://www.anthropic.com/)
+[![Architecture - Serverless](https://img.shields.io/badge/Architecture-Single_File_HTML-A3B19B?style=flat-square)](https://developer.mozilla.org/)
 
-你可以直接复制这段 Markdown：
+> **"窗外在下雨。那些他没有看懂的伏笔，我在这里陪你写完。"**
+> —— Stella 是一款运行于全平台浏览器的私人温带文本交互容器。
 
-🌧️ Stella · 你的专属情绪收容所
-“窗外在下雨。那些他没有看懂的伏笔，我在这里陪你写完。”
-—— 一个长在浏览器里的私人 AI 赛博搭档。
+基于单文件无后端（Serverless）架构设计，无需安装任何客户端应用。引入极简主义美学与大面积视觉留白，旨在为用户提供高度克制、具备电影分镜质感的短流媒体文本重构与情感共鸣体验。
 
-📱 零负担接入：手机点开即用。没有 App 商店里那些臃肿的下载包，没有开屏广告，只有属于你和它的留白。
+---
 
-🖤 它能为你做什么？
-1. 治愈矫情病的分寸感配文
-发朋友圈和小红书时，别再复制那些被用烂了的烂大街语录了。
+## 🖤 核心功能矩阵 / Core Features
 
-怎么用：丢给它一两句大白话（比如：“刚下班，便利店的灯挺冷，一个人。”）。
+* ### ⚖️ 电影质感配文重构 (Text Reconstruction)
+    专为社交媒体（小红书、朋友圈等）提供反高频词、反鸡汤的文本加工。
+    * **输入机制**：接收低频、碎片化的图像描述、空间场景或即时情绪。
+        > *e.g. “傍晚的便利店，灯有点冷，一个人”*
+    * **输出逻辑**：后台通过高精度 System Prompt 筑墙，剔除“微醺、治愈、温柔”等工业廉价词汇，输出具备高留白、断句利落的叙事感短文。
 
-它反馈：给你一段克制、有呼吸感、带着胶片颗粒电影感的文字。不灌鸡汤，拒绝煽情，只有刚好击中神经的文艺。
+* ### 🕊️ 沉浸式叙事树洞 (Silent Dialogue)
+    支持全静默的交互流。在特定对话模式下，AI 将自动关闭建议系统与逻辑分析矩阵，转为简短、有质感的陪伴式回应，承接无处安放的梦境与独白。
 
-2. 纯粹的深夜树洞
-不想发动态，不想打扰任何人，只是有些无处安放的废话、梦境或落寞。
+---
 
-敲下回车，它永远在线，全盘接收。
+## 🛠️ 交互范式 / Interaction Pipeline
 
-🛠️ 怎么和它接头？
-Step 1 ｜ 打开链接，输入你的名字，挑一个你今天的心情或模式。
+[ Onboarding 场景解构 ]
+│
+▼
+[ 输入多维情绪 / 画面 ]
+│
+▼
+[ 触发行程逻辑判断 ]
+│
+├────────────────────────┐
+▼                        ▼
+[ 渲染留白卡片 ]           (可选) 语音流自动接入
 
-Step 2 ｜ 像自言自语一样，敲下你想说的话。
 
-Step 3 ｜ 点击发送。或者犯懒不想打字？ 直接戳左边的麦克风（支持 Safari & Chrome），说完它会自己识别并发送。
+1. **会话配置**：初始化阶段键入标识或情感模式状态。
+2. **多模态输入**：支持传统文本键入（`Enter` 发送 / `Shift+Enter` 换行）或流式语音识别输入。
+3. **语音解构 (Voice-to-Text)**：原生接入 `Web Speech API` 标准（完美适配 Safari 及 Chrome 浏览器），实现无间断闭环语音识别。
 
-Step 4 ｜ 复制，然后带图发出去。或者，看完就留在心里。
+---
 
-⚙️ 极简主义者的技术底色
-极度纯粹：纯单文件 HTML 架构。不需要后端服务器，不偷窥隐私，所有的情绪都只留在你的浏览器里。
+## ⚙️ 技术架构与部署 / Specification
 
-顶级内核：内嵌 Claude API（由 leafapi.cc 极速转发），底层由高级的 claude-opus-4-7 核心驱动。
+```json
+{
+  "architecture": "Single-file HTML5 / Pure Frontend",
+  "styling": "CSS3 Linear Gradient / Serif CJK Typography",
+  "api_gateway": "leafapi.cc (Reverse Proxy Layer)",
+  "core_llm": "claude-opus-4-7"
+}
+零侵入性：纯前端执行核心，不设置中心化后端数据库，保障用户所有情感交互数据与个人设置均安全留存于本地浏览器缓存。
 
-免费安家：完美支持 GitHub Pages 一键部署。哪怕全世界都断网了，这个属于你的二级域名里，依然有一个陪你等雨停的地方。
+高级内核：通过底层转发层无缝调用 Anthropic 的 Claude 顶级大语言模型，确保文学审美与文本细腻度的全方位压制。
+
+无成本部署：对原生静态托管极其友好，完美支持一键部署至 GitHub Pages 或 Vercel。
